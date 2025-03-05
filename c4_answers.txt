@@ -1,0 +1,26 @@
+1. Purpose of the next() Function in the Compilation Process
+   
+	The next() function in C4 acts as a lexical analyzer or tokenizer. Its primary role is to scan the source code and extract the next token, classifying it as an identifier, keyword, 	literal, or operator. This function moves the pointer p through the source code and updates the 'tk' variable with the type of token found. By doing this, next() transforms raw 	text into structured tokens that the parser can process in the next stage. This function plays a crucial role in converting unstructured source code into a form suitable for parsing, 	facilitating the creation of an intermediate representation for code generation.
+
+2. Symbol Resolution in C4
+   
+	C4 manages symbol resolution using a straightforward symbol table mechanism. This table, stored in the sym array, maintains information about identifiers such as variables and 	functions. The table records attributes like the identifier's type, value, and scope (whether it is a global variable, local variable, function, or system call). When the compiler 	encounters an identifier in the source code, it checks the symbol table to determine if it has already been defined and retrieves relevant information. This mechanism ensures proper 	recognition of variables and functions, allowing the compiler to distinguish between declarations, assignments, and function calls.
+
+3. Limitations of C4 as a Compiler
+   
+	C4 is a minimalist compiler designed for simplicity, which means it lacks many features found in full-fledged C compilers. Some of its key limitations include:
+   	- Limited Data Types: Only supports char, int, and pointer types, lacking more complex types like float, double, structs, and unions.
+   	- Restricted Control Structures: Only basic control structures such as if, while, and return are available, without support for switch, for, or more advanced loop constructs.
+   	- No Advanced Features: Features such as function overloading, inline functions, macros, and variable-length arrays are not implemented.
+   	- Minimal Error Handling: C4 provides only basic error messages, making debugging difficult compared to modern compilers that offer detailed diagnostics and suggestions.
+   	- Lack of Optimizations: The generated code is not optimized for performance, resulting in potentially inefficient execution compared to compilers like GCC or Clang, which include 	advanced optimization phases.
+
+4. Self-Hosting Capability of C4
+   
+	C4 is capable of compiling its own source code, a feature known as self-hosting. This means that C4 includes enough functionality to parse and compile the subset of C that it is 	written in. Self-hosting has several important implications:
+   	- Portability and Simplicity: Because it supports only a small subset of C, C4 can be easily ported to different systems and used as a foundational compiler for building more complex 	ones.
+   	- Educational Value: The simplicity of C4 makes it an excellent learning tool for understanding compiler design without the complexity of full-scale compilers.
+   	- Feature Trade-offs: While self-hosting demonstrates that C4 is a functional compiler, its restricted feature set limits its ability to compile more complex C programs beyond its 	own source code.
+
+	Overall, C4's design makes it a useful tool for learning about compiler internals and for bootstrapping more advanced compilers, though its limitations mean it is not suitable for 	general-purpose C development.
+

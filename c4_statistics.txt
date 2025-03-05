@@ -1,0 +1,31 @@
+C4 Code Analysis Summary
+
+1. Code Metrics:
+
+Total Lines of Code (LOC): 486
+Files Analyzed: 1 (c4.c)
+2. Function Analysis:
+
+Number of Functions: 4
+Functions with Details:
+next: LOC = 84, Cyclomatic Complexity (CCN) = 85, Tokens = 1016, Parameters = 0
+expr: LOC = 147, CCN = 91, Tokens = 2403, Parameters = 1
+stmt: LOC = 47, CCN = 15, Tokens = 395, Parameters = 0
+main: LOC = 181, CCN = 100, Tokens = 2214, Parameters = 2
+3. Complexity and Risks:
+
+Average LOC per Function: 114.8
+Average Cyclomatic Complexity per Function: 72.8
+Average Tokens per Function: 1507.0
+Functions with High Risk (CCN > 15 or LOC > 100): next, expr, main
+4. Loop and Control Structure Analysis:
+
+'if|while|for' Keywords Appear: 217 times
+5. Memory Usage:
+
+Heap Usage at Program Exit: 0 bytes (no memory leaks)
+Total Heap Transactions: 1 allocation, 1 free, 1024 bytes allocated
+6. Recommendations:
+
+Consider refactoring functions next, expr, and main to reduce complexity and improve maintainability.
+Monitor and optimize memory usage, especially in dynamic allocation patterns, to avoid potential leaks in larger or more complex scenarios.
